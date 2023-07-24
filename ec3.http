@@ -23,26 +23,26 @@
 # Deben desplegar su aplicación en render
 # Al finalizar el examen entregarlo en el siguiente link: https://forms.office.com/r/fdytLW5PHe
 
-@server = INSERTAR URL DE RENDER ACÁ
+@server = https://ec-3.onrender.com
 @api = {{server}}/api/ec3
 
 ################ Categorias: ################
 ###
-GET {{api}}/categorias
+GET {{server}}/categorias
 ###
-POST {{api}}/categorias
+POST {{server}}/categorias
 Content-Type: application/json
 
 {"nombre": "Instrumentos de Cuerda"}
 ################ Instrumentos: ################
 ###
-GET {{api}}/instrumentos
+GET {{server}}/instrumentos
 ###
-POST {{api}}/instrumentos
+POST {{server}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
+{"nombre": "Guitarra", "categoria": "https://ec-3.onrender.com/categorias/1"}
 ###
-GET {{api}}/instrumentos/1/categoria
+GET {{server}}/instrumentos/1/categoria
 ###
-GET {{api}}/instrumentos?sort=nombre,desc
+GET {{server}}/instrumentos?sort=nombre,desc
